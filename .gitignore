@@ -1,0 +1,17 @@
+# macOS system files
+.DS_Store
+
+# PHPStorm and other IDE config files
+.idea/
+
+# Package metadata
+package.xml
+
+# Qodana configuration
+qodana.yaml
+
+# Dependencies folder
+vendor/
+
+# Xdebug package
+xdebug-3.4.1.tgz
