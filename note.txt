@@ -1,0 +1,51 @@
+1. Awl shi fata7et postman w katabet al url ta3oul al project:
+http://localhost/login_postman/pages/signup_action.php
+
+2. 7attet al option 3al POST
+
+3. Ro7et 3al header section:
+   A. Key: Content-Type
+
+	What is Content-Type?
+
+	The Content-Type header is an HTTP header that specifies the type of data being sent in the body of a request (or response). It tells the server how to interpret the data.
+
+	For example:
+
+    	If you're sending JSON data, the Content-Type would be application/json.
+
+    	If you're sending form data, the Content-Type would be application/x-www-form-urlencoded or multipart/form-data.
+
+    B. Value = application/x-www-form-urlencoded
+
+	What is application/x-www-form-urlencoded?
+
+	This is a specific Content-Type used when sending form data in an HTTP request. It is the default encoding type for HTML forms.
+	How It Works:
+
+   	 Data Format:
+
+      		The data is encoded as key-value pairs.
+
+        	Each key-value pair is separated by an & symbol.
+
+        	Keys and values are separated by an = symbol.
+
+        	Spaces are replaced with +, and special characters are URL-encoded.
+
+    	Example:
+
+    		first_name=John&last_name=Doe&username=johndoe&email=johndoe%40example.com&password=password123
+
+
+4. Ro7et 3al body section w 3abbet bl key al columns li 3ende yehon,  bl value 3abbet sample data.
+
+5. Kabaset 3al send 2am katable: 
+	
+	JSON response: {"status":"success","message":"User registered successfully"}
+	w ro7et 3al database la2et al data li katabton fiha!!
+
+
+
+JSON (JavaScript Object Notation) is a lightweight data format used to store and exchange data between a client and a server. It is easy for humans to read and write, and easy for machines to parse and generate. JSON is widely used in web development, APIs, and configuration files.
+
