@@ -2,7 +2,21 @@
 session_start();
 require 'db.php';
 
-$database = new db();
+//$host = "localhost";
+//$dbname = "login_postman";
+//$username = "root";
+//$password = "";
+
+require __DIR__ . '/../vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ );
+$dotenv->load();
+
+try {
+    $database = new db($_ENV['DB_HOST'], $_ENV['DB_NAME'], $_ENV['DB_USERNAME'], $_ENV['DB_PASSWORD']);
+} catch (Exception $e) {
+    echo "Error: " . $e->getMessage();
+}
 
 $username = $_POST['username'] ?? '';
 $password = $_POST['password'] ?? '';

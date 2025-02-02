@@ -1,13 +1,29 @@
 <?php
 require 'db.php';
 
-$database = new db();
+//$host = "localhost";
+//$dbname = "login_postman";
+//$username = "root";
+//$password = "";
+
+require __DIR__ . '/../vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ );
+$dotenv->load();
+
+try {
+    $database = new db($_ENV['DB_HOST'], $_ENV['DB_NAME'], $_ENV['DB_USERNAME'], $_ENV['DB_PASSWORD']);
+} catch (Exception $e) {
+    echo "Error: " . $e->getMessage();
+}
 
 $first_name = $_POST['first_name'] ?? '';
 $last_name = $_POST['last_name'] ?? '';
 $username = $_POST['username'] ?? '';
 $email = $_POST['email'] ?? '';
 $password = $_POST['password'] ?? '';
+
+
 
 if (empty($first_name) || empty($last_name) || empty($username) || empty($email) || empty($password)) {
     die(json_encode(["status" => "error", "message" => "All fields are required"]));
