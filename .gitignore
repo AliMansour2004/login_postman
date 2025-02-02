@@ -15,3 +15,6 @@ vendor/
 
 # Xdebug package
 xdebug-3.4.1.tgz
+
+#env file (credentials)
+pages/.env
