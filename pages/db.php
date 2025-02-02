@@ -10,7 +10,7 @@ class db
     /**
      * @throws Exception
      */
-    public function __construct($dbhost = "localhost", $dbname = "login_postman", $username = "root", $password = "")
+    public function __construct($dbhost, $dbname, $username, $password)
     {
 
         try {
