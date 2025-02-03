@@ -7,8 +7,9 @@ require 'db.php';
 //$password = "";
 
 require __DIR__ . '/../vendor/autoload.php';
-
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ );
+//var_dump(__DIR__);
+//$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ );
+$dotenv = Dotenv\Dotenv::createImmutable('/Applications/XAMPP/xamppfiles/htdocs/login_postman');
 $dotenv->load();
 
 try {
@@ -43,4 +44,3 @@ try {
 } catch (Exception $e) {
     echo json_encode(["status" => "error", "message" => "Signup failed: " . $e->getMessage()]);
 }
-?>

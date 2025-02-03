@@ -9,7 +9,7 @@ require 'db.php';
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ );
+$dotenv = Dotenv\Dotenv::createImmutable('/Applications/XAMPP/xamppfiles/htdocs/login_postman');
 $dotenv->load();
 
 try {
